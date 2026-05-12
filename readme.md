@@ -27,7 +27,6 @@ This list points to the apps people use, the docs builders read, the protocol th
 - [Background Reading](#background-reading)
 - [Community](#community)
 - [Contribute](#contribute)
-- [License](#license)
 
 ## Start Here
 
@@ -49,7 +48,7 @@ User-facing surfaces for holding, sending, and spending CRC.
 
 ## Mini Apps
 
-Mini Apps are small, single-purpose web apps that load inside the Gnosis / Circles host and use a postMessage protocol for wallet signing. They come in two flavors: **embedded** (shipped from the official registry, native UX) and **standalone** (run anywhere, sign via QR or deep link). See the [Build a Mini App](#build-a-mini-app) section for the docs.
+Mini Apps are small, single-purpose web apps that load inside the Gnosis / Circles host and use a postMessage protocol for wallet signing. They come in two flavors: **embedded** (shipped from the official registry, native UX) and **standalone** (run anywhere, sign via QR or deep link).
 
 ### Consumer Mini Apps
 
@@ -186,17 +185,10 @@ Prior winners - useful as design inspiration.
 ## Community
 
 - [Telegram - About Circles](https://t.me/about_circles) - Main builders + users chat.
-- [aboutcircles.com](https://aboutcircles.com) - Source of truth for current Discord, Forum, Farcaster, and X / Twitter links.
-- [GitHub - aboutcircles](https://github.com/aboutcircles) - All official repositories.
+- [GitHub - aboutcircles](https://github.com/aboutcircles) - All official repositories. Discord, Forum, Farcaster, and X / Twitter links are listed in the org profile and on the main homepage.
 - [GitHub - CirclesUBI (legacy)](https://github.com/CirclesUBI) - Circles v1 / Circles Garden source.
 - Email: `hello@aboutcircles.com`
 
 ## Contribute
 
 Contributions welcome - see [contributing.md](contributing.md) for the format and review criteria. Open a PR if your project, tool, or guide belongs on this list.
-
-## License
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, the contributors have waived all copyright and related or neighboring rights to this work.
