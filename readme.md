@@ -41,7 +41,7 @@ Circles is a personal-money protocol: every account issues its own currency, bal
 
 ## Start Here
 
-- [Circles World](https://world.gnosis.io) - Public entry point. Earn CRC by inviting friends, create a group, build an app, or host an event.
+- [Circles World](https://world.gnosis.io) - Earn CRC by inviting friends, create a group, build an app, or host an event.
 - [Circles World - Mini Apps](https://circles.gnosis.io) - Browse the live mini-app gallery from any Gnosis App wallet.
 - [About Circles homepage](https://aboutcircles.com/manifesto) - Manifesto, whitepaper, FAQ, and ecosystem overview.
 - [How Circles Works](https://docs.aboutcircles.com/overview/how-it-works) - Personal currencies, group currencies, trust, and demurrage in one page.
@@ -152,7 +152,6 @@ Routing engines that turn the trust graph into transfer paths.
 - [circles-gnosisApp-starter-kit](https://github.com/aboutcircles/circles-gnosisApp-starter-kit) - Official TypeScript starter for Gnosis × Circles apps.
 - [circles-dev-kit](https://github.com/aboutcircles/circles-dev-kit) - Guided, hands-on tour of the Circles SDK.
 - [Circles-starter-kit](https://github.com/aboutcircles/Circles-starter-kit) - Hacker guide for developers to learn Circles and build projects.
-- [circles-sdk-svelte-examples](https://github.com/aboutcircles/circles-sdk-svelte-examples) - Worked Svelte examples for common SDK calls.
 - [circles-vite-app](https://github.com/aboutcircles/circles-vite-app) - Vite playground for both Circles v1 and v2.
 - [SDK Quickstart](https://docs.aboutcircles.com/circles-sdk/getting-started-with-the-sdk) - Install, connect a wallet, and mint your first CRC.
 - [Setting up the SDK with React + JavaScript](https://docs.aboutcircles.com/tutorials-and-examples/setting-up-circles-sdk-with-react-and-javascript) - End-to-end React integration.
