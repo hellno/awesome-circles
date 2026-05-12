@@ -42,7 +42,7 @@ The front door to Circles for new users.
 
 User-facing surfaces for holding, sending, and spending CRC.
 
-- [Metri](https://app.metri.xyz/welcome) - The official Circles v2 wallet. Passkey login, Safe smart account, fiat on/off-ramps via CoW Swap, and real-world spending via Gnosis Pay.
+- [Metri](https://app.metri.xyz) - The official Circles v2 wallet. Passkey login, Safe smart account, fiat on/off-ramps via CoW Swap, and real-world spending via Gnosis Pay.
 - [Gnosis App](https://app.gnosis.io) - Gnosis super-app that hosts Circles accounts, invite links, and the Mini App store.
 - [Gnosis Pay](https://gnosispay.com) - Visa-compatible card that lets you spend CRC and other Gnosis Chain assets at any merchant.
 
@@ -69,6 +69,8 @@ Mini Apps are small, single-purpose web apps that load inside the Gnosis / Circl
 - [Sign Message Demo](https://aboutcircles.github.io/miniappDemo/demo-sign/) - Minimal example of requesting a signature via the Mini App postMessage protocol.
 - [ERC20 Transfer Demo](https://aboutcircles.github.io/miniappDemo/demo-tx/) - Minimal example of requesting a wallet transaction.
 
+> Built something? Open a PR - see [contributing.md](contributing.md). Strong submissions can also enter the [Mini Apps Launchpad](https://docs.aboutcircles.com/miniapps/circles-mini-apps-launchpad) bounty program ($500 / $1,000).
+
 ## Protocol & Architecture
 
 The on-chain layer that everything else builds on. Deployed on [Gnosis Chain](https://www.gnosis.io/gnosis-chain).
@@ -78,7 +80,6 @@ The on-chain layer that everything else builds on. Deployed on [Gnosis Chain](ht
 - [circles-groups](https://github.com/aboutcircles/circles-groups) - Reference group-template contracts (membership conditions, custom mint policies).
 - [Personal Currencies](https://docs.aboutcircles.com/overview/how-it-works/personal-currency) - Per-avatar minting, demurrage math, and the rule of trust.
 - [Group Currencies](https://docs.aboutcircles.com/overview/how-it-works/group-currencies) - How communities pool personal CRC into a fungible group token.
-- [Migrate v1 → v2](https://docs.aboutcircles.com/user-guides/migrate-v1-account/migrate-circles-v1-account-to-v2) - Guide for legacy Circles Garden / UBI accounts.
 
 ## Developer Tools
 
@@ -185,8 +186,9 @@ Prior winners - useful as design inspiration.
 ## Community
 
 - [Telegram - About Circles](https://t.me/about_circles) - Main builders + users chat.
-- [GitHub - aboutcircles](https://github.com/aboutcircles) - All official repositories. Discord, Forum, Farcaster, and X / Twitter links are listed in the org profile and on the main homepage.
-- [GitHub - CirclesUBI (legacy)](https://github.com/CirclesUBI) - Circles v1 / Circles Garden source.
+- [@aboutcircles on X](https://x.com/aboutcircles) - Announcements and ecosystem updates.
+- [GitHub - aboutcircles](https://github.com/aboutcircles) - All official repositories.
+- Discord, Forum, and Farcaster: linked from the About Circles homepage (see top of this page).
 - Email: `hello@aboutcircles.com`
 
 ## Contribute
