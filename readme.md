@@ -69,7 +69,7 @@ Mini Apps are small, single-purpose web apps that load inside the Gnosis / Circl
 - [Sign Message Demo](https://aboutcircles.github.io/miniappDemo/demo-sign/) - Minimal example of requesting a signature via the Mini App postMessage protocol.
 - [ERC20 Transfer Demo](https://aboutcircles.github.io/miniappDemo/demo-tx/) - Minimal example of requesting a wallet transaction.
 
-> Built something? Open a PR - see [contributing.md](contributing.md). Strong submissions can also enter the [Mini Apps Launchpad](https://docs.aboutcircles.com/miniapps/circles-mini-apps-launchpad) bounty program ($500 / $1,000).
+> Built a mini app? Submit it via the *Contribute* section below. Strong submissions can also enter the Mini Apps Launchpad bounty (linked under *Build a Mini App*).
 
 ## Protocol & Architecture
 
