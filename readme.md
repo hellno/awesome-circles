@@ -41,7 +41,7 @@ Circles is a personal-money protocol: every account issues its own currency, bal
 
 ## Start Here
 
-- [Circles World](https://world.gnosis.io) - Top-of-funnel landing page. Earn CRC by inviting friends, create a group, build an app, or host an event.
+- [Circles World](https://world.gnosis.io) - Public entry point. Earn CRC by inviting friends, create a group, build an app, or host an event.
 - [Circles World - Mini Apps](https://circles.gnosis.io) - Browse the live mini-app gallery from any Gnosis App wallet.
 - [About Circles homepage](https://aboutcircles.com/manifesto) - Manifesto, whitepaper, FAQ, and ecosystem overview.
 - [How Circles Works](https://docs.aboutcircles.com/overview/how-it-works) - Personal currencies, group currencies, trust, and demurrage in one page.
@@ -110,9 +110,7 @@ Deployed on [Gnosis Chain](https://www.gnosis.io/gnosis-chain).
 ## Explorers & Indexers
 
 - [circles-explorer](https://github.com/aboutcircles/circles-explorer) - Block-explorer-style UI for Circles transactions, events, humans, groups, and orgs.
-- [circles-envio-indexer](https://github.com/aboutcircles/circles-envio-indexer) - Envio-based indexer for Circles v2 events.
 - [profile-service](https://github.com/aboutcircles/profile-service) - Stores and retrieves avatar profile metadata via IPFS.
-- [circles-data-app](https://github.com/aboutcircles/circles-data-app) - Python data app for working with on-chain Circles data.
 
 ## Pathfinders
 
@@ -135,7 +133,6 @@ Routing engines that turn the trust graph into transfer paths.
 - [@aboutcircles/sdk-transfers](https://www.npmjs.com/package/@aboutcircles/sdk-transfers) - Build transfer payloads from pathfinder output.
 - [@aboutcircles/sdk-types](https://www.npmjs.com/package/@aboutcircles/sdk-types) - Shared TypeScript types.
 - [@aboutcircles/sdk-utils](https://www.npmjs.com/package/@aboutcircles/sdk-utils) - Demurrage math and helpers.
-- [circles-core](https://github.com/aboutcircles/circles-core) - Common methods for interacting with Circles, used across older clients.
 - [SDK Reference](https://docs.aboutcircles.com/circles-sdk-reference/circles-sdk-interface) - Full method and event surface for the current SDK.
 
 ## APIs & Infrastructure
@@ -161,6 +158,7 @@ Routing engines that turn the trust graph into transfer paths.
 - [Setting up the SDK with React + JavaScript](https://docs.aboutcircles.com/tutorials-and-examples/setting-up-circles-sdk-with-react-and-javascript) - End-to-end React integration.
 - [Gnosis App Starter Kit Tutorial](https://docs.aboutcircles.com/tutorials-and-examples/circles-x-gnosis-app-starter-kit) - Walkthrough of the official starter.
 - [Vibecoding a Standalone Mini App](https://docs.aboutcircles.com/miniapps/standalone-mini-apps/simple-vibecoding-tutorial) - Ship a standalone mini app with no protocol expertise.
+
 ## For AI Agents
 
 Resources that help coding agents (Claude Code, Cursor, Codex, Windsurf) write Circles code that compiles against the *current* SDK instead of hallucinating deprecated APIs.
@@ -177,7 +175,6 @@ Resources that help coding agents (Claude Code, Cursor, Codex, Windsurf) write C
 - [PyCircleSim](https://github.com/aboutcircles/PyCircleSim) - Agent-based simulator for Circles network dynamics in Python.
 - [pyfinder-dgen](https://github.com/aboutcircles/pyfinder-dgen) - Synthetic Circles data generator for pathfinder benchmarking.
 - [circles_arbbots](https://github.com/aboutcircles/circles_arbbots) - Arbitrage bots that help equilibrate prices across CRC tokens.
-- [circles-reputation-metrics](https://github.com/aboutcircles/circles-reputation-metrics) - Building blocks for a Circles reputation/recommendation system.
 - [Universal basic income on blockchain: the case of Circles UBI](https://www.frontiersin.org/journals/blockchain/articles/10.3389/fbloc.2024.1362939/full) - Peer-reviewed analysis of Circles as a UBI mechanism (Frontiers in Blockchain).
 
 ## Hackathon Projects
