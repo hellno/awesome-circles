@@ -2,13 +2,13 @@
 
 > A curated list of resources for the [Circles](https://aboutcircles.com) ecosystem - a decentralized, trust-based currency on [Gnosis Chain](https://www.gnosis.io) where every human mints 1 CRC per hour.
 
-Circles is a personal-money protocol: every account issues its own currency, balances decay 7% per year (demurrage), and value flows along trust edges. Group currencies wrap personal CRC into fungible community money, and a network-wide pathfinder turns transitive trust into seamless payments.
-
-This list points to the apps people use, the docs builders read, the protocol they build on, and the communities they ship with.
+Circles is a personal-money protocol: every account issues its own currency, balances decay 7% per year (demurrage), and value flows along trust edges. Group currencies wrap personal CRC into fungible community money, and a network-wide pathfinder routes transitive-trust payments.
 
 ## Contents
 
+- [Glossary](#glossary)
 - [Start Here](#start-here)
+- [Build a Mini App](#build-a-mini-app)
 - [Wallets & Apps](#wallets--apps)
 - [Mini Apps](#mini-apps)
   - [Consumer Mini Apps](#consumer-mini-apps)
@@ -21,16 +21,25 @@ This list points to the apps people use, the docs builders read, the protocol th
 - [SDKs & Libraries](#sdks--libraries)
 - [APIs & Infrastructure](#apis--infrastructure)
 - [Starter Kits & Tutorials](#starter-kits--tutorials)
-- [Build a Mini App](#build-a-mini-app)
+- [For AI Agents](#for-ai-agents)
 - [Research, Simulation & Reputation](#research-simulation--reputation)
 - [Hackathon Projects](#hackathon-projects)
 - [Background Reading](#background-reading)
 - [Community](#community)
 - [Contribute](#contribute)
 
-## Start Here
+## Glossary
 
-The front door to Circles for new users.
+| Term           | Meaning                                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------------------ |
+| CRC            | The currency unit. Every human avatar mints 1 CRC per hour.                                            |
+| Avatar         | A Circles account. Three kinds: human, group, organization.                                            |
+| Trust          | A directional edge: "I accept your CRC at 1:1." Makes a token transferable to strangers.               |
+| Group currency | A fungible ERC-20 backed by a basket of members' personal CRC - one shared money for a community.      |
+| Demurrage      | The 7%/year balance decay. Money you don't use shrinks; the point is to keep CRC circulating.          |
+| Pathfinder     | Service that finds a chain of trust edges to route a payment from A to B (transitive trust).           |
+
+## Start Here
 
 - [Circles World](https://world.gnosis.io) - Top-of-funnel landing page. Earn CRC by inviting friends, create a group, build an app, or host an event.
 - [Circles World - Mini Apps](https://circles.gnosis.io) - Browse the live mini-app gallery from any Gnosis App wallet.
@@ -38,9 +47,19 @@ The front door to Circles for new users.
 - [How Circles Works](https://docs.aboutcircles.com/overview/how-it-works) - Personal currencies, group currencies, trust, and demurrage in one page.
 - [Introducing Circles v2](https://www.gnosis.io/blog/introducing-circles-v2-money-for-a-multipolar-world) - The v2 launch announcement on the Gnosis blog explaining design rationale.
 
-## Wallets & Apps
+## Build a Mini App
 
-User-facing surfaces for holding, sending, and spending CRC.
+The fastest builder path. A mini app is a small web app that loads inside the Circles host and signs through the user's Safe via postMessage. *Embedded* mini apps ship from the official registry; *standalone* mini apps run anywhere and approve transactions via QR or deep link.
+
+- [What are Circles Mini Apps](https://docs.aboutcircles.com/miniapps/what-are-circles-mini-apps) - Embedded vs standalone, when to pick which.
+- [Embedded Mini App guide](https://docs.aboutcircles.com/miniapps/embedded-mini-apps) - Build a mini app that ships inside the official store.
+- [Intermediate Embedded guide](https://docs.aboutcircles.com/miniapps/embedded-mini-apps/intermediate-embedded-mini-app-guide) - Advanced patterns for embedded apps.
+- [Standalone Mini App guide](https://docs.aboutcircles.com/miniapps/standalone-mini-apps) - Run anywhere, sign via QR or deep link.
+- [Contribute a Mini App](https://docs.aboutcircles.com/miniapps/contribute-mini-apps) - Slug, code at `src/routes/apps/<slug>/`, logo, `miniapps.json` entry, PR.
+- [Mini Apps Launchpad](https://docs.aboutcircles.com/miniapps/circles-mini-apps-launchpad) - Rolling bounties: $500 App of the Week, $1,000 Winner of the Month.
+- [CirclesMiniapps repo](https://github.com/aboutcircles/CirclesMiniapps) - The host SvelteKit app and the registry. Submit PRs here.
+
+## Wallets & Apps
 
 - [Metri](https://app.metri.xyz) - The official Circles v2 wallet. Passkey login, Safe smart account, fiat on/off-ramps via CoW Swap, and real-world spending via Gnosis Pay.
 - [Gnosis App](https://app.gnosis.io) - Gnosis super-app that hosts Circles accounts, invite links, and the Mini App store.
@@ -48,11 +67,11 @@ User-facing surfaces for holding, sending, and spending CRC.
 
 ## Mini Apps
 
-Mini Apps are small, single-purpose web apps that load inside the Gnosis / Circles host and use a postMessage protocol for wallet signing. They come in two flavors: **embedded** (shipped from the official registry, native UX) and **standalone** (run anywhere, sign via QR or deep link).
+Live examples to study and remix. See *Build a Mini App* above for the docs.
 
 ### Consumer Mini Apps
 
-- [Coinflip Game](https://coinflip-miniapp-omega.vercel.app/game) - Bet 1 CRC on heads or tails. The canonical "hello world" of embedded mini apps.
+- [Coinflip Game](https://coinflip-miniapp-omega.vercel.app/game) - Bet 1 CRC on heads or tails; the reference embedded mini app.
 - [XMTP Demo](https://zengzengzenghuy.github.io/xmtp-circles-miniapp/) - End-to-end encrypted DMs and group chat between Circles accounts via XMTP.
 - [Merch Shop](https://github.com/aboutcircles/merch-shop-miniapp) - Reference checkout flow for selling merch in CRC.
 
@@ -69,11 +88,9 @@ Mini Apps are small, single-purpose web apps that load inside the Gnosis / Circl
 - [Sign Message Demo](https://aboutcircles.github.io/miniappDemo/demo-sign/) - Minimal example of requesting a signature via the Mini App postMessage protocol.
 - [ERC20 Transfer Demo](https://aboutcircles.github.io/miniappDemo/demo-tx/) - Minimal example of requesting a wallet transaction.
 
-> Built a mini app? Submit it via the *Contribute* section below. Strong submissions can also enter the Mini Apps Launchpad bounty (linked under *Build a Mini App*).
-
 ## Protocol & Architecture
 
-The on-chain layer that everything else builds on. Deployed on [Gnosis Chain](https://www.gnosis.io/gnosis-chain).
+Deployed on [Gnosis Chain](https://www.gnosis.io/gnosis-chain).
 
 - [Circles Architecture Overview](https://docs.aboutcircles.com/overview/circles-architecture) - Hub V2, vaults, treasury, mint policies, and name registry on one diagram.
 - [circles-contracts-v2](https://github.com/aboutcircles/circles-contracts-v2) - Solidity source for the Hub V2 (ERC-1155), Migration contract, Name Registry, Standard Treasury, Vaults, and Base Mint Policy.
@@ -144,17 +161,16 @@ Routing engines that turn the trust graph into transfer paths.
 - [Setting up the SDK with React + JavaScript](https://docs.aboutcircles.com/tutorials-and-examples/setting-up-circles-sdk-with-react-and-javascript) - End-to-end React integration.
 - [Gnosis App Starter Kit Tutorial](https://docs.aboutcircles.com/tutorials-and-examples/circles-x-gnosis-app-starter-kit) - Walkthrough of the official starter.
 - [Vibecoding a Standalone Mini App](https://docs.aboutcircles.com/miniapps/standalone-mini-apps/simple-vibecoding-tutorial) - Ship a standalone mini app with no protocol expertise.
-- [Agentic Setup for Circles](https://docs.aboutcircles.com/miniapps/agentic-setup-for-circles) - Wire Circles into an AI-coding-agent workflow.
+## For AI Agents
 
-## Build a Mini App
+Resources that help coding agents (Claude Code, Cursor, Codex, Windsurf) write Circles code that compiles against the *current* SDK instead of hallucinating deprecated APIs.
 
-- [What are Circles Mini Apps](https://docs.aboutcircles.com/miniapps/what-are-circles-mini-apps) - Embedded vs. standalone, when to pick which.
-- [Embedded Mini App guide](https://docs.aboutcircles.com/miniapps/embedded-mini-apps) - Build a mini app that ships inside the official store.
-- [Intermediate Embedded guide](https://docs.aboutcircles.com/miniapps/embedded-mini-apps/intermediate-embedded-mini-app-guide) - Advanced patterns for embedded apps.
-- [Standalone Mini App guide](https://docs.aboutcircles.com/miniapps/standalone-mini-apps) - Run anywhere, sign via QR or deep link.
-- [Contribute a Mini App](https://docs.aboutcircles.com/miniapps/contribute-mini-apps) - Slug, code at `src/routes/apps/<slug>/`, logo, `miniapps.json` entry, PR.
-- [Mini Apps Launchpad](https://docs.aboutcircles.com/miniapps/circles-mini-apps-launchpad) - Rolling bounties: $500 App of the Week, $1,000 Winner of the Month.
-- [CirclesMiniapps repo](https://github.com/aboutcircles/CirclesMiniapps) - The host SvelteKit app and the registry. Submit PRs here.
+- [Agentic Setup for Circles](https://docs.aboutcircles.com/miniapps/agentic-setup-for-circles) - Official guide: install [Context7 MCP](https://github.com/upstash/context7), point your agent at the `aboutcircles/circles-docs` and `aboutcircles/sdk` libraries, drop a `CLAUDE.md` / `.cursorrules` in the project root.
+- [llms.txt](https://docs.aboutcircles.com/llms.txt) - Compact index of the docs, formatted for LLM ingestion.
+- [llms-full.txt](https://docs.aboutcircles.com/llms-full.txt) - Full doc corpus in one file. Paste into a prompt or fetch from an agent.
+- [Doc query endpoint](https://docs.aboutcircles.com/readme.md?ask=how%20do%20I%20mint%20a%20group%20token) - `GET https://docs.aboutcircles.com/<path>.md?ask=<question>` returns an answer grounded in that page. Works for any doc page.
+- [Sitemap](https://docs.aboutcircles.com/sitemap.md) - Machine-readable index of every doc URL.
+- [Autonomous agent build branch](https://github.com/aboutcircles/CirclesMiniapps/tree/feature/autonomous-agent-build-instructions) - Reference mini-app build instructions written for autonomous agents.
 
 ## Research, Simulation & Reputation
 
@@ -165,8 +181,6 @@ Routing engines that turn the trust graph into transfer paths.
 - [Universal basic income on blockchain: the case of Circles UBI](https://www.frontiersin.org/journals/blockchain/articles/10.3389/fbloc.2024.1362939/full) - Peer-reviewed analysis of Circles as a UBI mechanism (Frontiers in Blockchain).
 
 ## Hackathon Projects
-
-Prior winners - useful as design inspiration.
 
 - [BraceBuddy](https://ethglobal.com/showcase/bracebuddy-ph10y) - NFC bracelet onboarding for Circles (ETHGlobal Brussels 2024, 1st prize).
 - [Woleth](https://ethglobal.com/showcase/woleth-eth-3ukpz) - Telegram-embedded EVM wallet using Circles invite mechanics (ETHGlobal Brussels 2024, runner-up).
