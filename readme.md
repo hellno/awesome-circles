@@ -58,6 +58,7 @@ The fastest builder path. A mini app is a small web app that loads inside the Ci
 - [Contribute a Mini App](https://docs.aboutcircles.com/miniapps/contribute-mini-apps) - Slug, code at `src/routes/apps/<slug>/`, logo, `miniapps.json` entry, PR.
 - [Mini Apps Launchpad](https://docs.aboutcircles.com/miniapps/circles-mini-apps-launchpad) - Rolling bounties: $500 App of the Week, $1,000 Winner of the Month.
 - [CirclesMiniapps repo](https://github.com/aboutcircles/CirclesMiniapps) - The host SvelteKit app and the registry. Submit PRs here.
+- [oic_apps](https://github.com/aboutcircles/oic_apps) - Open Internet Club mini-app framework: metadata-driven configs, QR-code payments, real-time Circles RPC event monitoring.
 
 ## Wallets & Apps
 
@@ -95,6 +96,7 @@ Deployed on [Gnosis Chain](https://www.gnosis.io/gnosis-chain).
 - [Circles Architecture Overview](https://docs.aboutcircles.com/overview/circles-architecture) - Hub V2, vaults, treasury, mint policies, and name registry on one diagram.
 - [circles-contracts-v2](https://github.com/aboutcircles/circles-contracts-v2) - Solidity source for the Hub V2 (ERC-1155), Migration contract, Name Registry, Standard Treasury, Vaults, and Base Mint Policy.
 - [circles-groups](https://github.com/aboutcircles/circles-groups) - Reference group-template contracts (membership conditions, custom mint policies).
+- [circles-social-recovery](https://github.com/aboutcircles/circles-social-recovery) - Foundry contracts for a Safe SocialRecoveryModule letting GApp users recover passkey access via human guardians.
 - [Personal Currencies](https://docs.aboutcircles.com/overview/how-it-works/personal-currency) - Per-avatar minting, demurrage math, and the rule of trust.
 - [Group Currencies](https://docs.aboutcircles.com/overview/how-it-works/group-currencies) - How communities pool personal CRC into a fungible group token.
 
@@ -124,6 +126,7 @@ Routing engines that turn the trust graph into transfer paths.
 ## SDKs & Libraries
 
 - [@aboutcircles/sdk](https://github.com/aboutcircles/sdk) - Current TypeScript SDK. Simplified surface over avatars, trust, pathfinding, profiles, and Safe execution. Published as `@aboutcircles/sdk` on npm.
+- [circles-rs](https://github.com/deluXtreme/circles-rs) - Rust workspace mirroring the TS SDK: RPC client, pathfinder, flow-matrix, transfer planning, and a higher-level `circles-sdk` crate.
 - [circles-sdk (legacy)](https://github.com/aboutcircles/circles-sdk) - Earlier full-surface TypeScript SDK. Still referenced by many existing tutorials.
 - [@aboutcircles/sdk-core](https://www.npmjs.com/package/@aboutcircles/sdk-core) - Low-level contract bindings for Hub V2.
 - [@aboutcircles/sdk-rpc](https://www.npmjs.com/package/@aboutcircles/sdk-rpc) - Typed client for the Circles JSON-RPC methods.
@@ -133,6 +136,7 @@ Routing engines that turn the trust graph into transfer paths.
 - [@aboutcircles/sdk-transfers](https://www.npmjs.com/package/@aboutcircles/sdk-transfers) - Build transfer payloads from pathfinder output.
 - [@aboutcircles/sdk-types](https://www.npmjs.com/package/@aboutcircles/sdk-types) - Shared TypeScript types.
 - [@aboutcircles/sdk-utils](https://www.npmjs.com/package/@aboutcircles/sdk-utils) - Demurrage math and helpers.
+- [5ecret-garden](https://github.com/aboutcircles/5ecret-garden) - Circles Marketplace monorepo: `circles-market-sdk`, auth, cart, catalog, orders, offers, and profile packages plus a SvelteKit app.
 - [SDK Reference](https://docs.aboutcircles.com/circles-sdk-reference/circles-sdk-interface) - Full method and event surface for the current SDK.
 
 ## APIs & Infrastructure
@@ -144,6 +148,7 @@ Routing engines that turn the trust graph into transfer paths.
 - [circles-spaceneth](https://github.com/aboutcircles/circles-spaceneth) - Standalone Nethermind node bundled with indexer and contracts for local testing.
 - [crc-faucet](https://github.com/aboutcircles/crc-faucet) - CRC faucet for testnets / demos.
 - [circles-migration-tool](https://github.com/aboutcircles/circles-migration-tool) - Tooling for migrating accounts and balances from v1 to v2.
+- [invite-api](https://github.com/aboutcircles/invite-api) - Express/TypeScript HTTP API for issuing and auditing Circles invitations, with optional Slack webhook integration.
 - [marketplace-api](https://github.com/aboutcircles/marketplace-api) - Product-catalog aggregator and order API for the Circles Marketplace.
 - [Avatar event subscriptions](https://docs.aboutcircles.com/querying-circles-profiles-and-data/subscribing-to-avatar-events) - Stream balance, trust, and group events in real time.
 
@@ -153,6 +158,7 @@ Routing engines that turn the trust graph into transfer paths.
 - [circles-dev-kit](https://github.com/aboutcircles/circles-dev-kit) - Guided, hands-on tour of the Circles SDK.
 - [Circles-starter-kit](https://github.com/aboutcircles/Circles-starter-kit) - Hacker guide for developers to learn Circles and build projects.
 - [circles-vite-app](https://github.com/aboutcircles/circles-vite-app) - Vite playground for both Circles v1 and v2.
+- [mycircles](https://github.com/web3skeptic/mycircles) - Third-party SvelteKit reference combining `@aboutcircles/sdk`, Auth.js, and Safe protocol-kit for profile and trust management.
 - [SDK Quickstart](https://docs.aboutcircles.com/circles-sdk/getting-started-with-the-sdk) - Install, connect a wallet, and mint your first CRC.
 - [Setting up the SDK with React + JavaScript](https://docs.aboutcircles.com/tutorials-and-examples/setting-up-circles-sdk-with-react-and-javascript) - End-to-end React integration.
 - [Gnosis App Starter Kit Tutorial](https://docs.aboutcircles.com/tutorials-and-examples/circles-x-gnosis-app-starter-kit) - Walkthrough of the official starter.
@@ -183,6 +189,8 @@ Resources that help coding agents (Claude Code, Cursor, Codex, Windsurf) write C
 - [Famjam](https://ethglobal.com/showcase/famjam-99inm) - Family currency that rewards kids for good behavior (ETHGlobal Brussels 2024, runner-up).
 - [Voting with UBI](https://ethglobal.com/showcase/voting-with-ubi-k56uu) - DAO voting weighted by Circles group tokens (ETHGlobal Singapore 2024).
 - [Circles Subscriptz](https://ethglobal.com/showcase/circles-subscriptz-tgfhj) - Trustless recurring payments in CRC (ETHGlobal Prague 2025).
+- [Raila Circles](https://ethglobal.com/showcase/raila-circles-s5nix) - Trust-graph-based P2P uncollateralized lending with a Safe module and relayer margins (ETHGlobal Buenos Aires 2025, 1st place).
+- [Inner Circles](https://ethglobal.com/showcase/inner-circles-ctqzm) - No-collateral CRC lending where 3+ community vouchers escrow trust; interest drops as vouchers grow (ETHGlobal Buenos Aires 2025, 2nd place).
 - [Past Hackathon Projects index](https://docs.aboutcircles.com/developer-support/past-hackathon-projects-on-circles) - Maintained list with descriptions.
 
 ## Background Reading
